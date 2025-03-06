@@ -18,19 +18,19 @@ The data is provided in the CSV file factor_and_ret_oos.csv, which contains hist
 ---
 
 ## Steps 
-**1. Data Preprocessing**
+1. **Data Preprocessing**
 Load the data and clean it by removing unnecessary columns.
 Split the dataset into factors and future_return variables.
 Handle missing values by filling them with zeros and normalize the data.
-**2. Compute Correlations**
+2. **Compute Correlations**
 Compute the pairwise correlations between financial factors over rolling 3-year windows at 6-month intervals.
-**3. Ridge Regression Model**
+3. **Ridge Regression Model**
 Fit a Ridge regression model for different levels of the regularization parameter (alpha), using a rolling window of 3 years of historical data to predict future returns.
 Perform regression for various alpha values to determine the optimal alpha based on the Sharpe ratio of the predicted portfolios.
-**4. Portfolio Construction**
+4. **Portfolio Construction**
 After predicting returns with Ridge regression, construct portfolios by allocating weights based on predicted returns.
 Evaluate portfolio performance using the Sharpe ratio to identify the best performing portfolio.
-**5. Performance Evaluation**
+5. **Performance Evaluation**
 Compute both the actual and expected (unconditional) Sharpe ratios for portfolios.
 Visualize the returns of portfolios with different alphas to understand the relationship between the regularization parameter and portfolio performance.
 
